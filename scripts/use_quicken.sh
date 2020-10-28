@@ -49,6 +49,9 @@ function DownloadQuicken {
 	cp $vTgtOurQuickenDir/$vOurQuicken $vSrcOurQuickenDir
 	cksum $vTgtOurQuickenDir/$vOurQuicken
 	cksum $vSrcOurQuickenDir/$vOurQuicken
+	ls -l $vTgtOurQuickenDir/$vOurQuicken $vSrcOurQuickenDir/$vOurQuicken
+	echo "press enter to continue or CTRL-C to stop"
+	read
 	echo "Foxboro"
 	ls -l $vTgtFoxboroQuickenDir/$vFoxboroQuicken $vSrcFoxboroQuickenDir/$vFoxboroQuicken
 	echo "press enter to continue or CTRL-C to stop"
@@ -56,6 +59,7 @@ function DownloadQuicken {
 	cp $vTgtFoxboroQuickenDir/$vFoxboroQuicken $vSrcFoxboroQuickenDir
 	cksum $vTgtFoxboroQuickenDir/$vFoxboroQuicken
 	cksum $vSrcFoxboroQuickenDir/$vFoxboroQuicken
+	ls -l $vTgtFoxboroQuickenDir/$vFoxboroQuicken $vSrcFoxboroQuickenDir/$vFoxboroQuicken
 	echo "press enter to continue or CTRL-C to stop"
 	read
 	return $vDownloadQuicken
@@ -71,11 +75,17 @@ function UploadQuicken {
 	cp $vSrcOurQuickenDir/$vOurQuicken $vTgtOurQuickenDir
 	cksum $vSrcOurQuickenDir/$vOurQuicken
 	cksum $vTgtOurQuickenDir/$vOurQuicken
+	ls -l $vTgtOurQuickenDir/$vOurQuicken $vSrcOurQuickenDir/$vOurQuicken
+	echo "press enter to continue or CTRL-C to stop"
+	read
 	echo "Foxboro"
 	ls -l $vTgtFoxboroQuickenDir/$vFoxboroQuicken $vSrcFoxboroQuickenDir/$vFoxboroQuicken
+	echo "press enter to continue or CTRL-C to stop"
+	read
 	cp $vSrcFoxboroQuickenDir/$vFoxboroQuicken $vTgtFoxboroQuickenDir
 	cksum $vTgtFoxboroQuickenDir/$vFoxboroQuicken
 	cksum $vSrcFoxboroQuickenDir/$vFoxboroQuicken
+	ls -l $vTgtFoxboroQuickenDir/$vFoxboroQuicken $vSrcFoxboroQuickenDir/$vFoxboroQuicken
 	echo "press enter to continue or CTRL-C to stop"
 	read
 	return $vUploadQuicken
